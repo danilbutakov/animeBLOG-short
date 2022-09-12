@@ -1,6 +1,10 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "root", "test");
+session_start();
+
+$conn = mysqli_connect("localhost", "phpadmin", "password", "anime-blog");
+
+$_SESSION['$conn'] = $conn;
 
 if (!$conn) {
     die('Error connect to DataBase');

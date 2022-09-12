@@ -2,8 +2,10 @@
 
 session_start();
 
-//не работает    require_once __DIR__ . '/connect.php';
-$connect = mysqli_connect('localhost', 'root', 'root', 'test');
+include_once 'connect.php';
+// $connect = mysqli_connect('localhost', 'phpadmin', 'password', 'anime-blog');
+
+$conn = $_GET['conn'];
 
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -14,7 +16,7 @@ if ($pass === $pass_confirm) {
 
     $pass = md5($pass);
 
-    mysqli_query($connect, "INSERT INTO `users` (`id`, `name`, `email`, `pass`) VALUES (NULL, '$name', '$email', '$pass')");
+    mysqli_query($conn, "INSERT INTO `users` (`id`, `name`, `email`, `pass`) VALUES (NULL, '$name', '$email', '$pass')");
 
     $_SESSION['message'] = 'Регистрация прошла успешно';
     header('Location: ../login.php');

@@ -1,13 +1,15 @@
 <?php
 
 session_start();
-//не работает    require_once __DIR__ . '/connect.php';
-$connect = mysqli_connect('localhost', 'root', 'root', 'test');
+require_once 'connect.php';
+//$connect = mysqli_connect('localhost', 'root', 'root', 'test');
+
+$conn = $_GET['conn'];
 
 $email = $_POST['email'];
 $pass = md5($_POST['pass']);
 
-$check_user = mysqli_query($connect, "SELECT * FROM `users` WHERE `email` = '$email' AND `pass` = '$pass'");
+$check_user = mysqli_query($conn, "SELECT * FROM `users` WHERE `email` = '$email' AND `pass` = '$pass'");
 
 if (mysqli_num_rows($check_user) > 0) {
     $user = mysqli_fetch_assoc($check_user);
