@@ -2,10 +2,8 @@
 
 session_start();
 
-include_once 'connect.php';
-// $connect = mysqli_connect('localhost', 'phpadmin', 'password', 'anime-blog');
-
-$conn = $_GET['conn'];
+//require_once __DIR__ . 'connect.php';
+$conn = mysqli_connect('localhost', 'phpadmin', 'password', 'anime-blog');
 
 $name = $_POST['name'];
 $email = $_POST['email'];

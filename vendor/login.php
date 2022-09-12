@@ -1,10 +1,8 @@
 <?php
 
 session_start();
-require_once 'connect.php';
-//$connect = mysqli_connect('localhost', 'root', 'root', 'test');
-
-$conn = $_GET['conn'];
+//не работает    require_once __DIR__ . 'connect.php';
+$conn = mysqli_connect('localhost', 'root', 'root', 'test');
 
 $email = $_POST['email'];
 $pass = md5($_POST['pass']);

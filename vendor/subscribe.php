@@ -1,12 +1,14 @@
 <?php
 
-require_once 'connect.php';
+$conn = mysqli_connect("localhost", "root", "", "anime-blog");
 
-$conn = $_GET['conn'];
+if (!$conn) {
+    die('Error connect to DataBase');
+}
 
 $query = mysqli_query($conn,"SELECT * FROM `subscribe`");
 
-$emailSub = $_POST['email__sub'];
+$emailSub = $_REQUEST['email__sub'];
 
 if ($query != '') {
     $query = "INSERT INTO subscribe VALUES ('$emailSub')";
