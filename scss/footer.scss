@@ -1,0 +1,144 @@
+@import "style.scss";
+
+.footer {
+    background: linear-gradient(95.32deg, #313131 0%, #000000 101.64%);
+    &__container {
+
+    }
+
+    &__up {
+        margin: 50px 0 84px 0;
+    }
+
+    .footer {
+        
+		&__container {
+        
+		}
+
+		&__up {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 15px 60px 15px;
+            @media (max-width: $md3) {
+            margin: 30px 15px 30px 15px;
+            flex-direction: column;
+            }
+		}
+
+		&__inf {
+            @media (max-width: $md3) {
+                margin-bottom: 50px;
+            }
+		}
+
+		&__down {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 38 / 16 * 100%;
+            letter-spacing: 0.677419px;
+            color: #FFFFFF;
+            padding: 21px 0;
+            border-top: 1px solid #FFFFFF;
+            margin: 0 0px 0 0px;
+            @media (max-width: $md3) {
+                margin: 0 15px 0 15px;
+                font-size: 10px;
+                line-height: 20 / 10 * 100%;
+            }
+            a {
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 0.677419px;
+                line-height: 38 / 20 * 100%;
+                color: #FAFAFA;
+                text-decoration: none;
+            }
+		}
+}
+
+.inf {
+
+		&__par {
+            margin: 25px 0 0 0;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 38 / 16 * 100%;
+            letter-spacing: 0.677419px;
+            color: #FFFFFF;    
+            @media (max-width: $md3) {
+                font-size: 12px;
+                line-height: 24 / 12 * 100%;
+                letter-spacing: 0px;
+                padding: 0 25px 0 0;
+            }     
+		}
+        &__images {
+            img {
+                transition: all 0.5s ease 0s;
+                @media (min-width: $md2) {
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+}
+
+.footer {
+
+    &__form {
+        max-height: 50px;
+        width: 400px;
+        background: #FAFAFA;
+        opacity: 0.8;
+        margin: 0 0 30px 0;
+        padding: 10px 10px;
+    }
+}
+.form {
+
+    &__body {
+        
+        @media (min-width: $md3) {
+            display: flex;
+        }
+    }
+
+    &__button {
+        margin: 0 40px 0 0;
+        @media (max-width: 900px) {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    &__input {
+        margin: 0 50px 0 0;
+        @media (max-width: 900px) {
+            margin: 0 15px 0 0;
+        }
+    }
+
+    &__ico {
+        background-color: #FAFAFA;
+        opacity: 0.8;
+        img {
+            
+            @media (max-width: $md3) {
+                display: none;
+            }
+            @media (min-width: 768px) {
+                margin: 2.5% 0 0 0;
+                display: block;
+            }
+        }
+    }
+}
+
+}
+

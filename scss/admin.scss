@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .title {
+        text-align: center;
+        padding-top: 100px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 58 / 30 * 100%;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: black;
+    }
+
+    .form-group {
+        padding-bottom: 15px;
+    }
+
+    .btn {
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+.hello {
+    font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 58 / 30 * 100%;
+        text-align: center;
+        color: black;
+}
+.logout {
+    font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 78 / 40 * 100%;
+        text-align: center;
+        color: black;
+}
+.section {
+    font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 58 / 30 * 100%;
+        text-align: center;
+        color: black;
+}
+
+.admin {
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        margin-bottom: 15px;
+    }
+}
