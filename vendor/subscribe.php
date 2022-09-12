@@ -10,7 +10,7 @@ $query = mysqli_query($conn,"SELECT * FROM `subscribe`");
 
 $emailSub = $_REQUEST['email__sub'];
 
-if ($query != '') {
+if (isset($query)) {
     $query = "INSERT INTO subscribe VALUES ('$emailSub')";
 }
 
