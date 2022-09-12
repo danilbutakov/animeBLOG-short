@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 $conn = mysqli_connect("localhost", "phpadmin", "password", "anime-blog");
 
 $_SESSION['$conn'] = $conn;
